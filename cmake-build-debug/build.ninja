@@ -57,6 +57,14 @@ build CMakeFiles/pre_engine.dir/main.cpp.obj: CXX_COMPILER__pre_engine_unscanned
   OBJECT_DIR = CMakeFiles\pre_engine.dir
   OBJECT_FILE_DIR = CMakeFiles\pre_engine.dir
 
+build CMakeFiles/pre_engine.dir/graphics.cpp.obj: CXX_COMPILER__pre_engine_unscanned_Debug C$:/Users/maksy/Projects/pixelengine/graphics.cpp || cmake_object_order_depends_target_pre_engine
+  DEFINES = -D_MBCS
+  DEP_FILE = CMakeFiles\pre_engine.dir\graphics.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/maksy/Projects/pixelengine/include
+  OBJECT_DIR = CMakeFiles\pre_engine.dir
+  OBJECT_FILE_DIR = CMakeFiles\pre_engine.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target pre_engine
@@ -65,7 +73,7 @@ build CMakeFiles/pre_engine.dir/main.cpp.obj: CXX_COMPILER__pre_engine_unscanned
 #############################################
 # Link the executable pre_engine.exe
 
-build pre_engine.exe: CXX_EXECUTABLE_LINKER__pre_engine_Debug CMakeFiles/pre_engine.dir/main.cpp.obj
+build pre_engine.exe: CXX_EXECUTABLE_LINKER__pre_engine_Debug CMakeFiles/pre_engine.dir/main.cpp.obj CMakeFiles/pre_engine.dir/graphics.cpp.obj
   FLAGS = -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = -ld2d1  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
