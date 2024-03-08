@@ -22,7 +22,7 @@ private:
 public:
     Color* pixelData;
     explicit Graphics(HINSTANCE hInstance, void (*start)(), void (*mainloop)());
-    void Show() const;
+    int Show() const;
     void Draw();
     ~Graphics();
 };
