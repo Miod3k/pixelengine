@@ -1,18 +1,14 @@
 #include "graphics.h"
-
-Graphics* graphics;
+Graphics graphics;
 
 void Start() {
 
 }
 
-void MainLoop() {
+void Update() {
 
 }
 
-int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE _, LPSTR cmd, int nCmdShow) {
-    graphics = new Graphics(hInstance, Start, MainLoop);
-    int result = graphics->Show();
-    delete graphics;
-    return result;
+int WINAPI WinMain(HINSTANCE instance, HINSTANCE prevInstance, LPSTR cmd, int nCmdShow) {
+    return (int) graphics.Run(instance, Start, Update);
 }

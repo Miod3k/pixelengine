@@ -11,18 +11,18 @@ struct Color {
 
 class Graphics {
 private:
-    ID2D1Factory* factory = nullptr;
     ID2D1HwndRenderTarget* target = nullptr;
+    ID2D1Factory* factory = nullptr;
     ID2D1Bitmap* bitmap = nullptr;
-    HWND handle = nullptr;
     D2D1_RECT_U bitmapRect{};
     D2D1_SIZE_U size{};
+    HWND handle = nullptr;
     void (*start)() = nullptr;
-    void (*mainloop)() = nullptr;
+    void (*update)() = nullptr;
 public:
     Color* pixelData;
-    explicit Graphics(HINSTANCE hInstance, void (*start)(), void (*mainloop)());
-    int Show() const;
+    explicit Graphics();
+    HRESULT Run(HINSTANCE instance, void (*start)(), void (*update)());
     void Draw();
     ~Graphics();
 };
